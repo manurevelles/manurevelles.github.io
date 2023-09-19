@@ -1,0 +1,982 @@
+/*  ------------GENERAL RULES - ALL WEBSITE------------------------> */
+
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('fonts/RobotoSlab-Bold.woff2') format('woff2');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('fonts/RobotoSlab-Regular.woff2') format('woff2');
+    font-weight: normal;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('fonts/RobotoSlab-Light.woff2') format('woff2');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Roboto Slab';
+    src: url('fonts/RobotoSlab-Medium.woff2') format('woff2');
+    font-weight: 500;
+}
+@font-face {
+    font-family: Metropolis;
+    src: url('fonts/Metropolis-Regular.otf');
+}
+
+@viewport {
+    width: device-width;
+}
+
+:root {
+    --base-color: white;
+    --base-bgcolor: rgb(22, 22, 60);
+    --navbar-color: white;
+    --navbar-bgcolor: rgb(14, 84, 154);
+    --navlink-hover-bgcolor: rgb(15, 39, 104);
+    --current-nav-color: rgb(24, 24, 44);
+    --current-nav-bgcolor: white;
+}
+
+
+html {
+    font-family: Roboto Slab;
+    font-weight: 300;
+    font-size: 16px;
+    color: var(--base-color);
+    background-color: var(--base-bgcolor);
+    background: linear-gradient(-90deg, rgb(17, 131, 245), var(--base-bgcolor));
+    background-size: 170%;
+}
+
+* {
+    padding: 0;
+}
+
+/* SECTIONS/HEADINGS/ELEMENTS ----------->*/
+
+h1, h2, nav, h3, h4{
+    font-family: metropolis;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 3.5em;
+}
+
+h2 {
+    margin:0;
+    font-size: 2.5em;
+    letter-spacing: -2px;
+}
+
+h3 {
+    font-size: 2em;
+    text-decoration: underline;
+}
+
+h4{
+    font-style: italic;
+    font-size: 1.3em;
+    padding-left: 0.5em;
+}
+
+main ul {
+    text-indent: 1em;
+    list-style-position:inside;
+}
+main h1 {
+    color: var(--base-color);
+    font-size: 3.5em;
+    letter-spacing: -0.05em;
+    font-style: italic;
+    text-indent: -0.2em;
+    margin: 2% 0% 6% 0;
+}
+
+#home main h1 {
+    margin: 7% 0;
+}
+
+#contact main img {
+    height: 3em;
+    transition: height 0.5s;
+}
+
+#contact main img:hover {
+    height:4em;
+}
+
+#contact section p:nth-child(3) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 3em;
+}
+
+main, aside {
+    margin: 5% 0;
+    padding: 1%;
+}
+
+aside {
+    text-align: justify;
+}
+
+#blog article{
+    color:black;
+    background-color:white;
+    padding: 4% 3%;
+    margin-top: 6%;
+}
+
+aside h2 {
+    border-left: 4px solid;
+    padding-left: 2%;
+    text-align: left;
+}
+
+aside section {
+    margin-top: 10%;
+    background-color: none;
+    transition: background-color 0.5s;
+}
+aside section:hover {
+    background-color: rgba(255, 255, 255, 0.200);
+}
+
+.side-note {
+    background-color: rgba(250, 235, 215, 0.69);
+    text-align: justify;
+    padding: 0.5em 2em;
+    margin: 3em 1em;
+}
+
+.side-note img .gallery-right {
+    float: right;
+    width: 30%;
+    margin: 0 0 2% 2%;
+}
+
+#projects .side-note {
+    background-color: initial;
+    font-size: 0.8em;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+}
+
+.date {
+    text-align: left;
+    font-size: 0.7em;
+    margin: 2px 0;
+}
+
+#blog b {
+    font-weight: 500;
+}
+
+ol li {
+    padding: 0 0 0.5em;
+    margin-left: 1.5em;
+}
+
+ol > li::marker, ul > li::marker {
+    font-weight: bold;
+    color: rgb(190, 125, 40);
+    font-size: 1.2em;
+}
+
+.not-true {
+    text-decoration: line-through;
+    font-style: normal;
+}
+
+.centered {
+    display: grid;
+    place-items: center;
+}
+
+table {
+    table-layout: fixed;
+    width: 100%;
+    font-size: 0.6em;
+}
+caption {
+    font-size: 1.5rem;
+    padding: 0.5em;
+}
+
+table {
+    border-collapse:collapse;
+    padding: 0.5em;
+    text-align: center;
+}
+
+tr {
+    height: 80px;
+}
+
+td {
+    border: 1px solid white;
+    border-collapse:collapse;
+    padding: 0.5em;
+    text-align: center; 
+}
+
+th {
+    color: black;
+    background-color: white;
+    border:1px solid var(--base-bgcolor);
+}
+
+tr:first-of-type td:first-of-type {
+    border:none;
+}
+
+td:hover{
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.15);    
+}
+
+caption {
+    font-weight: bold;
+}
+
+/* <------END: SECTIONS STYLING */
+
+/* IMAGES STYLING ----------->*/
+.gallery-right {
+    float: right;
+    width: 40%;
+    padding: 0 0 2% 2%;
+}
+
+.gallery-left {
+    float: left;
+    width: 40%;
+    margin: 2% 2% 0 0;
+}
+
+.gallery-center {
+    width:100%;
+    height:auto;
+}
+
+.gallery-center img {
+    width:auto;
+    height: auto;
+}
+
+#blog figure {
+    padding: 2%;
+    border-radius: 2%;
+    transition: margin 1s, background-color 1s ease-out;
+}
+
+#blog figure:hover {
+    margin: 4%;
+    background-color: rgba(147, 163, 179, 0.4);
+}
+
+#projects figure img {
+    transition: all 1s;
+}
+
+#projects figure img:hover {
+    transform: scale(110%);
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.9em;
+}
+
+blockquote {
+    background-color: rgb(247, 247, 247);
+    border-left: 2px solid rgb(240, 189, 123);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.2em;
+    font-style: italic;
+    margin-top: 5%;
+    padding: 1% 2%;
+    text-indent: 1em;
+}
+
+.credit {
+    text-align: right;
+    font-style: italic;
+}
+
+.side-note img {
+    /*specific to figurines image (blog.html) */
+    float: right;
+    width: 30%;
+    margin: 4% 6% 2% 6%;
+    shape-outside: circle(50%);
+}
+
+.about_img_1 {
+    float: right;
+    width: 40%;
+    margin-right: -6%;
+    shape-outside: circle(50%);
+    padding: 2%;
+}
+
+/*shape-outside NOT working
+.about_img_2 {
+    float:left;
+    width:30%;
+    margin-left: -8%;
+    shape-outside: url("about/map_ireland.png");
+    padding: 2% 3%;
+    margin-top:8%;
+}
+*/
+
+.about_img_2 {
+    float:left;
+    width:30%;
+    margin-left: -40px;
+    margin-top: 30px;
+    shape-outside: polygon(0px 0px, 76.34% 0.17%, 109.36% 40.01%, 77.9% 83.92%, 47.54% 98.37%, 0.87% 104.77%);
+    padding-right: 1em;
+}
+
+#about img {
+    max-width: 100%;
+}
+
+#about figure {
+    background-color: white;
+    color:black;
+    border:10px solid white;
+    font-weight: bold;
+}
+
+#about h2, #projects h2 {
+    margin-top: 2em;
+    margin-left: -1em;
+    margin-right: -1em;
+    padding: 0.2em 1em;
+    width: content;
+    background: linear-gradient(90deg, white, white,rgba(255, 255, 255, 0));
+    color: rgb(0, 0, 0);
+}
+
+#about p:nth-child(2):first-letter{
+    font-size: 1.4em;
+}
+
+/* <------END: IMAGES STYLING */
+
+.gallery-center source {
+    weight:auto;
+    height: auto;
+}
+
+video {
+    weight:100px;
+    height: 100px;
+}
+
+article iframe {
+    width: auto;
+    height: auto;
+}
+
+/* HEADER---------------------> */
+
+header img {
+    float:left;
+    padding: 0 38%;
+}
+
+header h1 {
+    color: var(--base-color);
+    position: relative;
+    top: 10px;
+    left: 10px;
+    font-size: 3em;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: -1px;
+}
+
+header a {
+    text-decoration: none;
+}
+/* <--------- HEADER END*/
+
+
+/* NAV--------------------------> */
+nav {
+    background-color: var(--navbar-bgcolor);
+}
+
+nav>ul {
+    list-style: none;
+    text-align: center;
+}
+
+nav li {
+    border: 2px solid;
+    border-top:none;
+}
+
+nav li:first-child{
+    border-top: 2px solid;
+}
+
+nav a {
+    display: block;
+    padding: 0.4em;
+    color: var(--navbar-color);
+    font-size: 1.4em;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: inherit;
+    transition: background-color 1s;
+}
+
+nav a:hover {
+    background-color: var(--navlink-hover-bgcolor);
+}
+
+.current, .current:hover {
+    color: var(--current-nav-color);
+    background-color: var(--current-nav-bgcolor);
+}
+
+nav a:active, .current:active {
+    text-shadow: 0px 0px 1px lightslategray;
+}
+
+/* <--------- NAV END*/
+
+
+footer {
+    font-size: 0.7em;
+}
+
+/*  <--------------------------END: GENERAL RULES - ALL WEBSITE---------- */
+
+/*  ----------PROJECTS <projects.html>----------> */
+
+#multimedia-projects section {
+    margin: 1em 0.5em;
+}
+
+#projects a, #about a, aside a {
+    color: rgb(217, 173, 79);
+    transition: all 0.3s;
+}
+#projects a:hover, #about a:hover, aside a:hover {
+    background-color: white;
+}
+#projects a:visited, #about a:visited, aside a:visited {
+    color: rgb(159, 114, 17);
+}
+
+#projects:nth-child(2) {
+    margin-bottom: 10em;
+}
+
+#projects>section {
+    padding-bottom: 1em;
+}
+
+
+/*  <----------END  <projects.html>---------- */
+
+
+/* @@@@@@---------------------MEDIA SCREEN SPECIFIC---------------------@@@@@@ */
+@media screen and (min-width: 450px) {
+    
+    header img {
+        padding: 0 3% 0% 11%;
+        border-right: 3px solid var(--base-color);
+    }
+
+    header h1 {
+        top: 6px;
+        left: 12px;
+        font-size: 3.1em;
+        text-align: left;
+    }
+    
+    main h1 {
+        font-size: 5em;
+        text-indent: -0.3em;
+    }
+
+    article iframe {
+        width: 426px;
+        height: 240px;
+    }
+
+    #contact main img {
+        height: 4em;
+    }
+    
+    #contact main img:hover {
+        height:5.5em;
+    }
+}
+
+
+@media screen and (min-width: 650px) {
+
+    /*background animation*/
+    #home {
+        background: linear-gradient(90deg, var(--base-bgcolor), rgb(23, 118, 214),rgb(152, 204, 222));
+        background-size: 300%;
+        animation: bg-animation 20s ease infinite;
+        animation-delay: 2s;
+    }
+    @keyframes bg-animation {
+        0% {background-position: 0 50%}
+        50% {background-position: 100% 50%}
+        100% {background-position: 0 50%}
+    }
+
+    /*background animation #colours like logo glasses
+    #home {
+        background: linear-gradient(-90deg, rgb(246, 234, 103), rgb(137, 227, 137), fuchsia, rgb(23, 118, 214), var(--base-bgcolor));
+        background-size: 400% 400%;
+        animation: bg-animation 30s ease infinite;
+        animation-delay: 2s;
+    }
+    @keyframes bg-animation {
+        0% {background-position: 0 50%}
+        50% {background-position: 100% 50%}
+        100% {background-position: 0 50%}
+    }
+    /*background animation*/
+
+    main, aside {
+        margin: 5% 5%;
+    }
+
+    main h1 {
+        font-size: 6em;
+        text-indent: -0.8em;
+    }
+
+    #home main h1 {
+        font-size: 6.5em;
+        text-indent: -0.6em;
+    }
+
+    #home h1 ~ p {
+        padding-left: 10%;
+        text-align: right;
+        font-size: 1.1em;
+        text-shadow: 1px 1px 0px black;
+    }
+
+    /* home section color change:
+        #home section {
+        padding-left: 10%;
+        text-align: right;
+        animation: home-color 20s ease infinite;
+        animation-delay: 2s;
+    }
+
+    @keyframes home-color {
+        0% {color: white;}
+        40% {color:rgb(66, 1, 112);}
+        80% {color: black;}
+        100% {color: white;}
+    }
+    */
+
+    article iframe {
+        width: 500px;
+        height: 281px;
+    }
+
+    .pic_month, .pic_month img{
+        padding:0;
+        width:100%;
+        margin: -1%;
+        transition: all 1s;
+    }
+    #blog .pic_month img:hover {
+        background-color: rgba(255, 255, 255, 0);
+        width: 140%;
+        margin: -1% -30%;
+    }
+    #blog .pic_month:hover {
+        background-color: rgba(255, 255, 255, 0);
+        margin:0;
+    }
+
+    /*header---->*/
+    header img {
+        padding:0 3% 0 4%;
+        border-right: none;
+    }
+    header h1 {
+        position: relative;
+        top: 30px;
+        left: 0px;
+        font-size: 3em;
+    }
+    /*<------ header end*/
+    /* nav------> */
+    nav {
+        position: sticky;
+        top: 0;
+        margin: 80px 0 0 0;
+    }
+    
+    nav ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav li, nav li:first-child {
+        border: none;
+    }
+
+    nav a {
+        display: block;
+        font-size: 1.3em;
+        padding: 1em;
+        margin: 0;
+        border-bottom: none;
+        transition: border-bottom 0.4s, background-color 1s;
+    }
+
+    nav a:hover {
+        border-bottom: 4px solid var(--current-nav-bgcolor);
+    }
+
+    .current:hover {
+        border-bottom: 4px solid var(--current-nav-color);
+    }
+    /* <---- nav end */
+
+    #about, #projects, #contact main{
+        font-size: 1.1em;
+    }
+
+    tr {
+        height: 60px;
+    }
+
+    .sticky-footer {
+        position: fixed;
+        bottom: 0;
+        width: max-content;
+        margin:0;
+    }
+}
+
+@media screen and (min-width: 1010px) {
+
+    main {
+        margin: 5% 8%;
+    }
+    
+    main h1 {
+        font-size: 6em;
+        text-indent: -1.3em;
+    }
+
+    #home main h1 {
+        font-size: 8em;
+        text-indent: -1em;
+    }
+
+    #home h1 ~ p {
+        padding-left: 20%;
+        font-size: 1.2em;
+    }
+
+    header h1:hover {
+        color: inherit;
+        animation: rainbow 6s ease-in-out infinite;
+    }
+
+    @keyframes rainbow {
+        0%   {color: white}
+        20%  {color: palegoldenrod}
+        40%  {color:palegreen}
+        60%  {color:rgb(237, 102, 255)}
+        80% {color:dodgerblue}
+        100% {color:white}
+    }
+
+    /* GRID LAYOUT------> */
+    body {
+        display: grid;
+        grid-template-columns: 1fr 1.5fr;
+        grid-template-areas:
+            'top-left top-right'
+            'middle middle'
+            'bottom bottom'
+    }
+    
+    header {
+        grid-area: top-left;
+    }
+    nav {
+        grid-area: top-right;
+    }
+    
+    main {
+        grid-area: middle;
+    }
+    
+    footer {
+        grid-area: bottom;
+    }
+    
+    /* <------ GRID END*/
+
+    /*HEADER & NAV------->*/
+    header {
+        background-color: var(--navbar-bgcolor);
+        position: sticky;
+        top:0;
+        padding: 0%;
+    }
+
+    header img {
+        width: 80px;
+        padding:0.5em 0 0.5em 0.3em;
+    }
+    
+    header h1 {
+        top: 12px;
+        left: 20px;
+        font-size: 1.7em;
+    }
+
+    #blog header h1 {
+        top: 8px;
+    }
+
+    nav {
+        margin: 0%
+    }
+
+    nav ul {
+        padding-top: 1%;
+        justify-content: end;
+    }
+
+    nav li {
+        padding: 0 0.3em;
+    }
+
+    nav li:last-child {
+        padding-right: 1em;
+    }
+
+    nav a {
+        font-size: 1em;
+        padding: 0.8em;
+        margin: 0;
+        border-radius: 10%;
+        letter-spacing: 2px;
+    }
+    
+    nav a:hover {
+        border-bottom: 1px solid var(--current-nav-bgcolor);
+    }
+
+    .current:hover {
+        border-bottom: 2px solid var(--current-nav-color);
+    }
+    /* <------ HEADER & NAV END*/
+
+
+    /*     Specific to single page:   */
+
+    /* ------BLOG <blog.html>---------------->  */
+    #blog h1 {
+        margin:5% 9%;
+    }
+
+    #blog main {
+        margin: auto 8%;
+    }
+
+    #blog main>section {
+        margin:auto 4%;
+    }
+
+    aside {
+        margin: 40% 8% 0% 0%;
+    }
+    aside section {
+        padding:3%;
+    }
+
+    /* GRID (BLOG) ------>*/
+
+    #blog {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas:
+            'top-left top-left top-left top-right top-right top-right top-right'
+            'middle-left middle-left middle-left middle-left middle-left middle-right middle-right'
+            'bottom bottom bottom bottom bottom bottom bottom'
+    }
+
+    #blog main {
+        grid-area: middle-left;
+    }
+    
+    #blog aside {
+        grid-area: middle-right;
+    }
+    
+    /* <------------END:GRID (BLOG)*/
+    /* <--------------------END-<blog.html>------  */
+
+    /* ------PROJECTS <projects.html>---------------->  */
+
+    /*GRID*/
+    #multimedia-projects {
+        width: 110%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        margin-left:-4em;
+        gap: 1em;
+        grid-template-areas: 'logo brochure photoshop'
+                             'video video photoshop'
+                             ' . animation animation'
+    }
+    .logo {
+        grid-area: logo;
+    }
+    .brochure {
+        grid-area: brochure;
+        padding-top: 10em;
+    }
+    .image-editing {
+        grid-area: photoshop;
+        padding-top: 22em;
+    }
+    .video-editing {
+        grid-area: video;
+        padding-top: 15em;
+    }
+    .animation {
+        grid-area: animation;
+    }
+    
+    /*
+    #multimedia-projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        margin: auto -10%;
+    }
+
+    #multimedia-projects section {
+        width: 30%;
+    }
+    */
+    /* <-----------END: <projects.html>----------------  */
+
+    /* -----ABOUT <about.html>---------------->  */
+
+    .about_right {
+        float:right;
+        width: 50%;
+        margin-right:-4%;
+    }
+
+    .about_left {
+        float: left;
+        width: 50%;
+        padding-right:0;
+        margin-left:-4%;
+    }
+
+    table {
+        font-size: 0.9em;
+    }
+
+    th {
+        font-size: 1.2em;
+    }
+
+    /* <----------ABOUT <about.html>--------------  */
+
+    /* ------CONTACT <contact.html>------------->  */
+
+    #contact main img {
+        height: 6em;
+    }
+
+    #contact main img:hover {
+        height:7.5em;
+    }
+
+    #contact section p:nth-child(3) {
+        margin-top: 6em;
+    }
+
+    /* <---------END:CONTACT <contact.html>----->  */
+}
+
+
+@media screen and (min-width: 1200px) {
+    
+    main h1 {
+        font-size: 8em;
+    }
+
+    nav ul {
+        padding: 0;
+        margin-top:2.5%;
+        justify-content: end;
+    }
+
+    nav a {
+        font-size: 1.2em;
+        padding: 0.8em;
+        margin: 0;
+    }
+
+    header h1 {
+        top: 2px;
+        left: 20px;
+        font-size: 2.3em;
+    }
+
+    #home main h1 {
+        font-size: 10em;
+        text-indent: -1.1em;
+    }
+    
+    #home h1 ~ p {
+        padding-left: 32%;
+    }
+
+    #blog header h1 {
+        top: -3px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    #about section {
+        margin: auto 7%;
+    }
+    #about h1 {
+        margin-left: -9%;
+    }
+}

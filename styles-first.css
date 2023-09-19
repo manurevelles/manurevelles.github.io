@@ -1,0 +1,123 @@
+@media screen and (min-width: 600px) {
+
+    /* GRID LAYOUT------> */
+    body {
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-areas:
+            'top'
+            'middle'
+            'bottom'
+    }
+    
+    header {
+        grid-area: top;
+    }
+    
+    main {
+        grid-area: middle;
+    }
+    
+    footer {
+        grid-area: bottom;
+    }
+    
+    /* <------ GRID END*/
+    
+    /* HEADER---------> */
+    header {
+        background-color: rgb(34, 24, 44);
+        position: sticky;
+        top: 0;
+    }
+    
+    nav {
+        float: right;
+    }
+    
+    nav>ul {
+        display: flex;
+        gap: 0.5em;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        list-style: none;
+        margin: 10px 10px 5px 0px;
+    }
+    
+    nav a {
+        color: white;
+        display: block;
+        font-size: 1.1em;
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 0.8em 0.8em;
+        border: 3px solid;
+        height:24px;
+        transition: height 1s, color 0.5s;
+    }
+    nav a:hover {
+        color: rgb(247, 187, 210);
+        height:30px;
+    }
+    .current, .current:hover {
+        color: black;
+        border: 3px solid white;
+        background-color: white;
+        background-image: none;
+    }
+    
+    header img {
+        width: 6%;
+        float: left;
+        margin: 5px 5px 5px 15px;
+        transition: width 2s;
+    }
+    
+    header img:hover{
+        width:10%;
+    }
+    
+    header h1 {
+        float: left;
+        font-size: 2.2em;
+        margin: 25px 0 0 10px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+    /* <--------- HEADER END*/
+    
+    
+        /* Specific rules */
+    /* ------BLOG <blog.html>------  */
+    
+    /* BLOG:GRID ------>*/
+    #blog {
+        display: grid;
+        grid-template-columns: 3fr 1.5fr;
+        grid-template-areas:
+            'top top'
+            'middle-left middle-right'
+            'bottom bottom'
+    }
+    
+    #blog main {
+        grid-area: middle-left;
+    }
+    
+    #blog aside {
+        grid-area: middle-right;
+    }
+    
+    /* <------ */
+    
+    #blog main, #blog aside {
+        margin: 50px 10px;
+    }
+    
+    .date {
+        text-align: end;
+        font-size: 70%;
+    }
+    
+    /* <------------END:BLOG GRID*/
+    }
